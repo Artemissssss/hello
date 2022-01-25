@@ -127,22 +127,15 @@
         p.type = "checkbox"
         bal3.appendChild(p)
        p.checked = dataA2[g];
-       p.innerHTML = data
+       p.value = data;
         a++;
       }
-      i++;
+      i++;jQuery
 $(".p").click( (e) => {
- if(e.target == true){
   set(ref(database, 'todolistzloy/' + e.target.id), {
-    task:e.target.innerHTML,    
-    complete: false,
+    task:e.target.value,    
+    complete: e.target.checked,
       });
-    }else{
-      set(ref(database, 'todolistzloy/' + e.target.id), {
-    task:e.target.innerHTML,    
-    complete: true,
-      });
-    }
     })
 
     });
